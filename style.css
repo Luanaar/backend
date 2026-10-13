@@ -1,0 +1,511 @@
+:root {
+    --primary-color: #4f46e5;
+    --primary-hover: #4338ca;
+
+    --danger-color: #ef4444;
+    --danger-hover: #dc2626;
+
+    --edit-color: #140ca5;
+    --edit-hover: orange;
+
+    --bg-color: #f3f4f6;
+    --surface-color: #ffffff;
+
+    --text-main: #111827;
+    --text-muted: #6b7280;
+
+    --border-color: #e5e7eb;
+
+    --radius: 12px;
+}
+
+
+/* ================================
+   RESET
+================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* ================================
+   BODY
+================================ */
+
+body {
+    font-family: 'Inter', sans-serif;
+
+    background-color: var(--bg-color);
+
+    color: var(--text-main);
+
+    display: flex;
+    justify-content: center;
+
+    padding: 2rem;
+
+    background-image: url(fundoo.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+
+/* ================================
+   CONTAINER PRINCIPAL
+================================ */
+
+.container {
+    width: 100%;
+    max-width: 1000px;
+
+    background: var(--surface-color);
+
+    border-radius: var(--radius);
+
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+
+    overflow: hidden;
+}
+
+
+/* ================================
+   HEADER
+================================ */
+
+header {
+    background: linear-gradient(
+        135deg,
+        #4f46e5 0%,
+        #1f8fec 100%
+    );
+
+    color: white;
+
+    padding: 2rem;
+
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+header p {
+    opacity: 0.9;
+    font-size: 1rem;
+}
+
+
+/* ================================
+   MAIN
+================================ */
+
+main {
+    padding: 2rem;
+
+    display: grid;
+
+    grid-template-columns: 1fr 2fr;
+
+    gap: 2rem;
+}
+
+
+/* ================================
+   RESPONSIVIDADE
+================================ */
+
+@media (max-width: 768px) {
+
+    body {
+        padding: 1rem;
+    }
+
+    main {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* ================================
+   FORMULÁRIO
+================================ */
+
+.form-section {
+    background: #ffffff;
+
+    padding: 1.5rem;
+
+    border-radius: var(--radius);
+
+    border: 1px solid var(--border-color);
+
+    /* Sombra do cadastro */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.10);
+}
+
+.form-section h2,
+.list-section h2 {
+    margin-bottom: 1.5rem;
+
+    font-size: 1.25rem;
+
+    color: var(--text-main);
+}
+
+
+/* ================================
+   INPUTS
+================================ */
+
+.input-group {
+    margin-bottom: 1.25rem;
+}
+
+.input-group label {
+    display: block;
+
+    margin-bottom: 0.5rem;
+
+    font-size: 0.875rem;
+
+    font-weight: 500;
+
+    color: var(--text-main);
+}
+
+.input-group input,
+.input-group select {
+    width: 100%;
+
+    padding: 0.75rem;
+
+    border: 1px solid var(--border-color);
+
+    border-radius: 8px;
+
+    font-size: 1rem;
+
+    font-family: inherit;
+
+    background-color: #ffffff;
+
+    color: var(--text-main);
+
+    transition:
+        border-color 0.2s,
+        box-shadow 0.2s;
+}
+
+
+/* ================================
+   FOCO DOS INPUTS
+================================ */
+
+.input-group input:focus,
+.input-group select:focus {
+    outline: none;
+
+    border-color: var(--primary-color);
+
+    box-shadow:
+        0 0 0 3px rgba(79, 70, 229, 0.15);
+}
+
+
+/* ================================
+   BOTÕES DO FORMULÁRIO
+================================ */
+
+.form-actions {
+    display: flex;
+
+    gap: 1rem;
+
+    margin-top: 1.5rem;
+}
+
+button {
+    padding: 0.75rem 1.5rem;
+
+    border: none;
+
+    border-radius: 8px;
+
+    font-weight: 500;
+
+    cursor: pointer;
+
+    transition: all 0.2s;
+
+    font-family: inherit;
+}
+
+
+/* ================================
+   BOTÃO SALVAR
+================================ */
+
+.btn-save {
+    background-color: var(--primary-color);
+
+    color: white;
+
+    flex: 1;
+}
+
+.btn-save:hover {
+    background-color: var(--primary-hover);
+
+    transform: translateY(-1px);
+}
+
+
+/* ================================
+   BOTÃO CANCELAR
+================================ */
+
+.btn-cancel {
+    background-color: #f3f4f6;
+
+    color: var(--text-main);
+
+    border: 1px solid var(--border-color);
+}
+
+.btn-cancel:hover {
+    background-color: #e5e7eb;
+}
+
+
+/* ================================
+   LISTA DE ALUNOS
+================================ */
+
+.list-section {
+    background: #ffffff;
+
+    padding: 1.5rem;
+
+    border-radius: var(--radius);
+
+    border: 1px solid var(--border-color);
+
+    /* Sombra da tabela */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.10);
+}
+
+
+/* ================================
+   TABELA
+================================ */
+
+.table-container {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 1rem;
+
+    text-align: left;
+
+    border-bottom: 1px solid var(--border-color);
+}
+
+
+/* ================================
+   CABEÇALHO DA TABELA
+================================ */
+
+th {
+    background-color: #f9fafb;
+
+    font-weight: 600;
+
+    color: var(--text-muted);
+
+    font-size: 0.875rem;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.05em;
+}
+
+
+/* ================================
+   LINHAS DA TABELA
+================================ */
+
+tbody tr {
+    transition: background-color 0.2s;
+}
+
+tbody tr:hover {
+    background-color: #f9fafb;
+}
+
+
+/* ================================
+   AÇÕES
+================================ */
+
+.actions {
+    display: flex;
+
+    gap: 0.5rem;
+}
+
+
+/* ================================
+   BOTÕES DE AÇÃO
+================================ */
+
+.btn-icon {
+    padding: 0.4rem 0.6rem;
+
+    border-radius: 6px;
+
+    font-size: 0.875rem;
+}
+
+
+/* ================================
+   BOTÃO EDITAR
+================================ */
+
+.btn-edit {
+    background-color: var(--edit-color);
+
+    color: white;
+}
+
+.btn-edit:hover {
+    background-color: var(--edit-hover);
+
+    color: #111827;
+}
+
+
+/* ================================
+   BOTÃO EXCLUIR
+================================ */
+
+.btn-delete {
+    background-color: var(--danger-color);
+
+    color: white;
+}
+
+.btn-delete:hover {
+    background-color: var(--danger-hover);
+}
+
+
+/* ================================
+   RESPONSIVIDADE DA TABELA
+================================ */
+
+@media (max-width: 768px) {
+
+    .actions {
+        flex-direction: column;
+    }
+
+    th,
+    td {
+        padding: 0.75rem;
+
+        font-size: 0.875rem;
+    }
+}
+
+
+/* ================================
+   IMPRESSÃO / PDF
+================================ */
+
+@media print {
+
+    @page {
+        size: A4 landscape;
+
+        margin: 0.5cm;
+    }
+
+    body {
+        background-color: white;
+
+        padding: 0;
+
+        margin: 0;
+
+        width: 100%;
+    }
+
+    .container {
+        box-shadow: none;
+
+        max-width: 100%;
+
+        width: 100%;
+
+        margin: 0;
+
+        border-radius: 0;
+    }
+
+    header,
+    .form-section,
+    .actions,
+    .list-section h2 {
+        display: none !important;
+    }
+
+    main {
+        display: block;
+
+        padding: 0;
+
+        grid-template-columns: 1fr;
+    }
+
+    .list-section {
+        padding: 0;
+
+        border: none;
+
+        box-shadow: none;
+    }
+
+    table {
+        page-break-inside: auto;
+
+        width: 100%;
+    }
+
+    th,
+    td {
+        padding: 12px;
+
+        font-size: 14px;
+
+        border: 1px solid #000;
+    }
+
+    tr {
+        page-break-inside: avoid;
+
+        page-break-after: auto;
+    }
+}
